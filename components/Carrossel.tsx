@@ -14,8 +14,6 @@ export default function Carrossel() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (imagens.length === 0) return;
-
     const intervalo = setInterval(() => {
       setIndex((prev) => (prev + 1) % imagens.length);
     }, 3000);
@@ -32,13 +30,15 @@ export default function Carrossel() {
       }}
     >
       <img
+        key={index}
         src={imagens[index]}
         alt="imagem do carrossel"
         style={{
-          width: "250px",
-          height: "250px",
+          width: "260px",
+          height: "260px",
           objectFit: "cover",
-          borderRadius: "12px",
+          borderRadius: "16px",
+          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
           transition: "0.5s",
         }}
       />

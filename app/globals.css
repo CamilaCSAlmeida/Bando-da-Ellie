@@ -1,21 +1,36 @@
-body {
+/* RESET */
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* 👈 evita corte lateral */
   font-family: Arial, sans-serif;
   background-color: #fffafc;
   color: #5a4a4a;
 }
 
-/* HEADER */
+/* BODY FLEX */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER GLOBAL */
 header {
+  width: 100%;
+  box-sizing: border-box; /* 👈 evita estouro */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 15px 40px;
   background-color: #fbeaec;
 }
 
+/* TÍTULO */
 header h2 {
   color: #d88c9a;
+  margin: 0;
 }
 
 /* LINKS */
@@ -34,8 +49,8 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza vertical */
-  align-items: center;     /* centraliza horizontal */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
 }
@@ -47,64 +62,38 @@ footer {
   background-color: #fbeaec;
   margin-top: auto;
 }
+
+/* BOTÃO PADRÃO */
 button {
   font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
 }
-html, body {
-  height: 100%;
+
+/* ===== MENU DESKTOP ===== */
+.nav-desktop {
+  display: flex;
+  gap: 12px; /* 👈 menor espaço */
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
+.nav-desktop a {
+  white-space: nowrap; /* 👈 impede quebrar "Quem somos" */
+  font-size: 14px;
 }
 
 /* BOTÃO HAMBURGUER */
 .menu-btn {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none; /* ESCONDIDO NO PC */
+  display: none;
 }
 
-/* MENU PADRÃO (PC) */
-.nav {
-  display: flex;
-  gap: 15px;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block; /* APARECE NO CELULAR */
-  }
-
-  .nav {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .nav-desktop {
     display: none;
-    flex-direction: column;
   }
 
-  .nav.open {
-    display: flex; /* abre ao clicar */
+  .menu-btn {
+    display: block;
   }
 }
