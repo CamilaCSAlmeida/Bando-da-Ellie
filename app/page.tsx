@@ -3,9 +3,9 @@ import Carrossel from "../components/Carrossel";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ textAlign: "center" }}>
 
-      {/* <Carrossel /> */}
+      <Carrossel />
 
       <h1 style={{ color: "#d88c9a" }}>
         Bem-vindo ao nosso cantinho 💕

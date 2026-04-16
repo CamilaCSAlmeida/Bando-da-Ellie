@@ -6,11 +6,11 @@ export default function QuemSomos() {
       <h1>Quem somos 💕</h1>
 
       <p>Somos um grupo cheio de amor...</p>
-      <p>Ellie: calopsita amarelinha</p>
-      <p>Abby: calopsita branca</p>
-      <p>Ada: periquito verde</p>
-      <p>Aurea: periquito australiano</p>
-      <p>Kratos: bico de lacre</p>
+      <p>Ellie: Uma calopsita amarela</p>
+      <p>Abby: É uma calopsita branca com manchinhas cinza</p>
+      <p>Ada: Uma periquito verde</p>
+      <p>Aurea: É uma periquito australiano</p>
+      <p>Kratos: Um bico de lacre</p>
 
       <br />
 
